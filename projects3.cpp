@@ -28,18 +28,50 @@ public:
         cin.ignore(); // to ignore newline character left in buffer
         cout << "\nEnter The Name of student: ";
         cin.getline(name, 50);
-        cout << "\nEnter The marks in physics out of 100: ";
-        cin >> p_marks;
-        cout << "\nEnter The marks in chemistry out of 100: ";
-        cin >> c_marks;
-        cout << "\nEnter The marks in maths out of 100: ";
-        cin >> m_marks;
-        cout << "\nEnter The marks in english out of 100: ";
-        cin >> e_marks;
-        cout << "\nEnter The marks in computer science out of 100: ";
-        cin >> cs_marks;
+    
+        do {
+            cout << "\nEnter The marks in physics out of 100: ";
+            cin >> p_marks;
+            if (p_marks < 0 || p_marks > 100) {
+                cout << "Invalid input! Marks should be between 0 and 100.\n";
+            }
+        } while (p_marks < 0 || p_marks > 100);
+    
+        do {
+            cout << "\nEnter The marks in chemistry out of 100: ";
+            cin >> c_marks;
+            if (c_marks < 0 || c_marks > 100) {
+                cout << "Invalid input! Marks should be between 0 and 100.\n";
+            }
+        } while (c_marks < 0 || c_marks > 100);
+    
+        do {
+            cout << "\nEnter The marks in maths out of 100: ";
+            cin >> m_marks;
+            if (m_marks < 0 || m_marks > 100) {
+                cout << "Invalid input! Marks should be between 0 and 100.\n";
+            }
+        } while (m_marks < 0 || m_marks > 100);
+    
+        do {
+            cout << "\nEnter The marks in english out of 100: ";
+            cin >> e_marks;
+            if (e_marks < 0 || e_marks > 100) {
+                cout << "Invalid input! Marks should be between 0 and 100.\n";
+            }
+        } while (e_marks < 0 || e_marks > 100);
+    
+        do {
+            cout << "\nEnter The marks in computer science out of 100: ";
+            cin >> cs_marks;
+            if (cs_marks < 0 || cs_marks > 100) {
+                cout << "Invalid input! Marks should be between 0 and 100.\n";
+            }
+        } while (cs_marks < 0 || cs_marks > 100);
+    
         calculate();
     }
+
 
     void showdata() const {
         cout << "\nRoll number of student: " << rollno;
